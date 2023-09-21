@@ -4,7 +4,7 @@ const upload = require("./upload"); // Assuming your multer setup is in a separa
 const router = express.Router();
 
 // Define a POST route to handle file uploads
-const add = ( upload.single("file"), (req, res) => {
+const add = ( upload.single('file'), (req, res) => {
   // You can access the uploaded file information in req.file
   if (!req.file) {
     return res.status(400).json({ error: "No file provided." });
